@@ -1,0 +1,64 @@
+// USER VARIABLES SECTION
+
+$accent: #A80000 // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #333 // Text Color
+$darkgrey: #ABABAB
+$grey: #F5F5F5
+$title: #373737
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$roboto: Roboto, sans-serif // Roboto Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+@import '../libs/swiper/swiper-bundle.min.css'
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		// font-display: swap // Uncomment to initially display system fonts
+		src: local($fname), url($furl) format('woff2')
+
+@include font('Roboto', normal, 400, '../fonts/RobotoRegular.woff2')
+@include font('Roboto', normal, 500, '../fonts/RobotoMedium.woff2')
+@include font('Roboto', normal, 700, '../fonts/RobotoBold.woff2')
+@include font('RobotoLight', normal, 400, '../fonts/RobotoLight.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+.img-responsive
+	max-width: 100%
+	height: auto
+
+body
+	font-family: $roboto
+	font-size: $fontsize
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	overflow-x: hidden
+	color: $textcolor

@@ -1,0 +1,168 @@
+@import config
+
+// Переопределяю стили Bootstrap
+.navbar
+  padding: 20px 0!important
+  border-bottom: 1px solid #333
+.navbar-brand
+  padding-top: 0
+  padding-right: 0
+  margin-right: 36px
+header .navbar-nav .nav-link
+  padding: 0
+header .navbar-expand-lg .navbar-nav .nav-link
+  padding: 0
+.nav-item
+  padding: 0
+  margin: 0 36px
+  .nav-link
+    color: $textcolor
+    &:hover
+      color: $accent
+  &.active
+    .nav-link
+      color: $accent
+  &:last-child
+    margin-right: 15px
+
+.navbar-toggler
+  padding: 0
+  &:focus
+    outline: none
+  .navbar-toggler-icon
+    background-color: #000
+    height: 2px
+    width: 35px
+    position: relative
+    &::after,
+    &::before
+      content: ''
+      position: absolute
+      width: 35px
+      height: 2px
+      background-color: #000000
+      top: 0
+      left: 0
+    &::after
+      transform: translateY(-10px)
+    &::before
+      transform: translateY(10px)
+
+header .form-inline .search_input
+  font-size: 14px
+  padding: 0 0 0 10px
+  width: 110px
+  border-radius: 0
+  border-top: none
+  border-left: none
+  border-right: none
+  display: none
+  &:focus,
+  &:active
+    outline: none
+    box-shadow: none
+  &.active
+    display: block
+
+.btn.search_btn
+  outline: none
+  padding-right: 0
+  padding-left: 0
+  &:focus,
+  &:active
+    outline: none
+    box-shadow: none
+
+#mainSlider
+  position: relative
+  margin-top: 20px
+.main_slider
+  &__wrapper
+  &__item
+    position: relative
+    //height: 450px
+    width: 100%
+    a
+      display: block
+      height: 100%
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+  .swiper-pagination
+    bottom: 30px
+    .swiper-pagination-bullet
+      width: 17px
+      height: 17px
+      border-radius: 50%
+      background-color: #fff
+      opacity: 1
+      margin: 0 10px
+      &-active
+        background-color: $accent
+
+#category
+  position: relative
+  margin-top: 30px
+  .category__item
+    position: relative
+    &_mobile
+      position: relative
+      height: 246px
+      width: 100%
+      display: none
+      overflow: hidden
+      &__img
+        padding-left: 40px
+        img
+          max-width: 155px
+      &__text
+        padding-top: 85px
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        span
+          color: $title
+          font-size: 20px
+          font-weight: 500
+          display: block
+          margin-bottom: 15px
+        &.white
+          span
+            color: #ffffff
+          .category__item_mobile_btn
+            background-color: #fff
+            border-color: #fff
+            color: $accent
+      &_btn
+        display: inline-block
+        width: 165px
+        height: 44px
+        line-height: 42px
+        font-size: 14px
+
+.theme-btn
+  position: relative
+  display: block
+  width: 180px
+  height: 48px
+  text-align: center
+  line-height: 48px
+  font-weight: bold
+  color: #373737
+  border: 1.3px solid #373737
+  border-radius: 10em
+  font-size: 14px
+  transition: all .6s ease
+  &:hover
+    text-decoration: none
+    background-color: $accent
+    color: #ffffff
+  &.category__item_btn
+    position: absolute
+    top: 180px
+    right: 40px
+
+@import media
