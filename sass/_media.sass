@@ -15,6 +15,8 @@
 		font-size: 12px
 		top: 150px
 		right: 32px
+	footer .footer_wrapper .footer_text
+		margin-right: 70px
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -43,6 +45,19 @@
 		font-size: 14px
 		top: 225px
 		right: 65px
+	.section_title
+		text-align: center
+	.howToBuy_item
+		height: auto
+		margin-bottom: 15px
+		text-align: center
+		padding: 50px 35px 60px 35px
+	footer .footer_wrapper
+		flex-direction: column
+		align-items: flex-start
+	.footer_contacts
+		margin-bottom: 1rem
+	
 // ≥768px
 +media-breakpoint-down(sm)
 	.main_slider .swiper-pagination
@@ -53,6 +68,21 @@
 		display: flex
 	#category .category__item_mobile
 		margin-bottom: 25px
+	.theme-btn
+		width: 150px
+		height: 40px
+		line-height: 40px
+		font-size: 13px
+	.section_title
+		font-size: 22px
+	#catalog.home, #doorsSlider
+		display: none
+	footer .footer_wrapper .footer_text
+		display: none
+	footer .footer_wrapper
+		flex-direction: row
+		align-items: center
+		padding: 33px 46px
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -68,6 +98,34 @@
 		height: 40px
 		line-height: 39px
 		font-size: 12px
+	#catalog .catalog_item__title
+		font-size: 14px
+		margin-top: 10px
+		margin-bottom: 5px
+	#catalog .catalog_item__price
+		font-size: 14px
+	#catalog .catalog_item__img img
+		max-height: 275px
+	#catalog .catalog_item__img
+		padding-top: 10px
+	.theme-btn
+		width: 120px
+		height: 30px
+		line-height: 28px
+		font-size: 12px
+	.howToBuy_item__descr
+		max-width: 150px
+		margin: 0 auto
+	#category
+		margin-bottom: 0
+	footer .footer_wrapper
+		padding: 45px 30px
+	footer .footer_wrapper .footer_contacts a.mail
+		text-decoration: underline
+	#howToBuy
+		margin-bottom: 0
+	footer
+		margin-top: 10px
 
 /*==========	Mobile First	==========*/
 

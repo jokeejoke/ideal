@@ -73,6 +73,18 @@ header .form-inline .search_input
     outline: none
     box-shadow: none
 
+// Свои стили
+
+.preloader
+  position: fixed
+  z-index: 999
+  width: 100%
+  height: 100vh
+  background-color: #ffffff
+  display: flex
+  justify-content: center
+  align-items: center
+
 #mainSlider
   position: relative
   margin-top: 20px
@@ -104,6 +116,7 @@ header .form-inline .search_input
 #category
   position: relative
   margin-top: 30px
+  margin-bottom: 30px
   .category__item
     position: relative
     &_mobile
@@ -136,6 +149,10 @@ header .form-inline .search_input
             background-color: #fff
             border-color: #fff
             color: $accent
+            &:hover
+              background-color: $accent
+              color: #ffffff
+              border-color: #fff
       &_btn
         display: inline-block
         width: 165px
@@ -160,9 +177,236 @@ header .form-inline .search_input
     text-decoration: none
     background-color: $accent
     color: #ffffff
+    border-color: $accent
   &.category__item_btn
     position: absolute
     top: 180px
     right: 40px
+
+.mb-30
+  margin-bottom: 30px
+
+.section_title
+  position: relative
+  margin-top: 15px
+  margin-bottom: 20px
+  color: $title
+  font-weight: 500
+  font-size: 24px
+
+#catalog
+  position: relative
+  .catalog_item
+    position: relative
+    text-align: center
+    border: 1px solid #ccc
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin-bottom: 30px
+    height: 100%
+    &:hover
+      text-decoration: none
+      border: none
+    &__hover
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: rgba(0,0,0,.5)
+      z-index: 10
+      display: flex
+      justify-content: center
+      align-items: center
+      transition: all .6s ease
+      opacity: 0
+      &_btn
+        display: inline-block
+        background-color: $accent
+        color: #ffffff
+        border-color: $accent
+    &:hover .catalog_item__hover
+      opacity: 1
+    &__img
+      position: relative
+      height: 270px
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      padding-top: 20px
+      padding-left: 10px
+      padding-right: 10px
+      img
+        max-height: 280px
+        max-width: 90%
+    &__title
+      font-size: 16px
+      text-transform: uppercase
+      color: #000000
+      margin-top: 20px
+      margin-bottom: 11px
+    &__price
+      font-weight: 700
+      color: #000000
+      font-size: 18px
+      margin-bottom: 10px
+
+#howToBuy
+  position: relative
+  margin-bottom: 30px
+.howToBuy_item
+  position: relative
+  background-color: #FFF4EC
+  padding: 66px 35px 87px 35px
+  height: 100%
+  &__icon
+    svg
+      fill: $accent
+  &__title
+    margin-top: 25px
+    margin-bottom: 10px
+    color: $title
+    font-size: 18px
+    font-weight: 500
+  &__descr
+    color: $title
+    font-size: 14px
+    line-height: 1.3
+
+#doorsSlider
+  position: relative
+  .doorsSlider__container
+    position: relative
+  .doorsSlider__item
+    &_hover
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: rgba(196, 196, 196, 0.5)
+    &.swiper-slide-active
+      .doorsSlider__item_hover
+        background-color: transparent
+    img
+      width: 570px
+      height: 500px
+      object-fit: cover
+  .swiper-button-prev,
+  .swiper-button-next
+    color: #ffffff
+  .swiper-button-prev
+    left: 10%
+  .swiper-button-next
+    right: 10%
+
+footer
+  position: relative
+  margin-top: 40px
+  .footer_wrapper
+    position: relative
+    background-color: #F5F5F5
+    padding: 48px 92px
+    display: flex
+    align-items: center
+    .footer_text
+      margin-right: 129px
+      p
+        margin-top: 24px
+        max-width: 378px
+        color: $title
+        font-size: 12px
+    .footer_contacts
+      &__title
+        text-transform: uppercase
+        font-weight: 700
+        color: $title
+        margin-bottom: 3px
+      a.mail
+        display: inline-block
+        font-size: 12px
+        color: $title
+      .address
+        font-size: 12px
+        color: $title
+        margin-top: 13px
+        margin-bottom: 25px
+      a.phone
+        display: inline-block
+        font-weight: 700
+        color: $title
+    .footer_social
+      position: relative
+      flex: 1
+      ul
+        margin: 0
+        padding: 0
+        list-style: none
+        display: flex
+        width: 100%
+        justify-content: flex-end
+        li
+          width: 43px
+          height: 43px
+          background-color: $accent
+          border-radius: 50%
+          text-align: center
+          line-height: 40px
+          a
+            display: block
+            color: #ffffff
+.breadcrumb_block
+  position: relative
+  margin-top: 50px
+  .breadcrumb
+    padding: 0
+    background-color: transparent
+    &-item
+      font-size: 14px
+      color: #797979
+      a
+        color: #797979
+.pagination_block
+  position: relative
+  margin-top: 10px
+  nav
+    border: 1px solid #ccc
+    padding: 29px 55px 28px 55px
+    .pagination
+      margin: 0
+      padding: 0
+      display: flex
+      justify-content: center
+      position: relative
+      .page-item
+        .page-link
+          border: none
+          font-size: 20px
+          font-weight: 400
+          color: #c4c4c4
+          svg
+            fill: black
+        &.active
+          .page-link
+            color: #000000
+            background-color: transparent
+        &:hover
+          .page-link
+            background-color: $accent
+            color: #ffffff
+            svg
+              fill: white
+      .to_start,
+      .to_end
+        position: absolute
+      .to_start
+        top: 0
+        left: 0
+      .to_end
+        top: 0
+        right: 0
 
 @import media

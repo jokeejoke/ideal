@@ -16,14 +16,7 @@
 
 <body>
 
-	<div class="preloader">
-		<picture>
-			<source srcset="images/dest/logotype.webp" type="image/webp">
-			<img src="images/dest/logotype.png" class="img-responsive logotype">
-		</picture>
-	</div>
-
-	<header class="home">
+	<header>
 
 		<div class="container">
 			<nav class="navbar navbar-expand-lg">
@@ -71,97 +64,29 @@
 		</div>
 	</header>
 
-	<section id="mainSlider">
-		<div class="container no-p">
-			<div class="main_slider swiper-container">
-				<div class="main_slider__wrapper swiper-wrapper">
-					<div class="main_slider__item swiper-slide">
-						<a href="#">
-							<picture>
-								<source srcset="images/dest/slider-img.webp" media="(min-width:768px)" type="image/webp">
-								<source srcset="images/dest/slider-mobile-img.webp" media="(max-width:768px)" type="image/webp">
-								<img src="images/dest/slider-img.png">
-							</picture>
-						</a>
-					</div>
-					<div class="main_slider__item swiper-slide">
-						<a href="#">
-							<picture>
-								<source srcset="images/dest/slider-img.webp" media="(min-width:768px)" type="image/webp">
-								<source srcset="images/dest/slider-mobile-img.webp" media="(max-width:768px)" type="image/webp">
-								<img src="images/dest/slider-img.png">
-							</picture>
-						</a>
-					</div>
-					<div class="main_slider__item swiper-slide">
-						<a href="#">
-							<picture>
-								<source srcset="images/dest/slider-img.webp" media="(min-width:768px)" type="image/webp">
-								<source srcset="images/dest/slider-mobile-img.webp" media="(max-width:768px)" type="image/webp">
-								<img src="images/dest/slider-img.png">
-							</picture>
-						</a>
-					</div>
-				</div>
-				<div class="swiper-pagination"></div>
-			</div>
-		</div>
-	</section>
-
-	<section id="category">
+	<div class="breadcrumb_block">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 no-p">
-					<div class="category__item">
-						<picture>
-							<source srcset="images/dest/mej-dveri.webp" type="image/webp">
-							<img src="images/dest/mej-dveri.png" class="img-responsive">
-						</picture>
-						<a href="#" class="category__item_btn theme-btn">Смотреть все</a>
-					</div>
-					<div class="category__item_mobile">
-						<div class="category__item_mobile__img">
-							<picture>
-								<source srcset="images/dest/dveri_mobile.webp" type="image/webp">
-								<img src="images/dest/dveri_mobile.png" class="img-responsive">
-							</picture>
-						</div>
-						<div class="category__item_mobile__text">
-							<span>Входные двери</span>
-							<a href="#" class="theme-btn category__item_mobile_btn">Смотреть все</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 no-p">
-					<div class="category__item">
-						<picture>
-							<source srcset="images/dest/mej-komnata.webp" type="image/webp">
-							<img src="images/dest/mej-komnata.png theme-btn" class="img-responsive">
-						</picture>
-						<a href="#" class="category__item_btn theme-btn">Смотреть все</a>
-					</div>
-					<div class="category__item_mobile">
-						<div class="category__item_mobile__img">
-							<picture>
-								<source srcset="images/dest/mej-dveri-mobile.webp" type="image/webp">
-								<img src="images/dest/mej-dveri-mobile.png" class="img-responsive">
-							</picture>
-						</div>
-						<div class="category__item_mobile__text white">
-							<span>Межкомнатные двери</span>
-							<a href="#" class="theme-btn category__item_mobile_btn">Смотреть все</a>
-						</div>
-					</div>
-				</div>
-			</div>
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">Главная</a></li>
+					<li class="breadcrumb-item"><a href="#">Двери</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Межкомнатные двери</li>
+				</ol>
+			</nav>
 		</div>
-	</section>
+	</div>
+
 
 	<section id="catalog" class="home">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<div class="section_title">Выбор покупателей</div>
+				<div class="col-md-4">
+					<div class="section_title">Межкомнатные двери</div>
+				</div>
+				<div class="col-md-8">
+					<div class="filter">
+
+					</div>
 				</div>
 			</div>
 			<div class="row">
@@ -293,125 +218,36 @@
 		</div>
 	</section>
 
-	<section id="howToBuy">
+
+	<div class="pagination_block">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="section_title">Как купить дверь</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 col-lg-3 no-p">
-					<div class="howToBuy_item">
-						<div class="howToBuy_item__icon">
-							<svg width="38" height="44" viewBox="0 0 38 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M33.7778 4.4H24.9533C24.0667 1.848 21.7444 0 19 0C16.2556 0 13.9333 1.848 13.0467 4.4H4.22222C1.9 4.4 0 6.38 0 8.8V39.6C0 42.02 1.9 44 4.22222 44H33.7778C36.1 44 38 42.02 38 39.6V8.8C38 6.38 36.1 4.4 33.7778 4.4ZM19 4.4C20.1611 4.4 21.1111 5.39 21.1111 6.6C21.1111 7.81 20.1611 8.8 19 8.8C17.8389 8.8 16.8889 7.81 16.8889 6.6C16.8889 5.39 17.8389 4.4 19 4.4ZM23.2222 35.2H8.44444V30.8H23.2222V35.2ZM29.5556 26.4H8.44444V22H29.5556V26.4ZM29.5556 17.6H8.44444V13.2H29.5556V17.6Z" />
+			<nav aria-label="Page navigation example">
+				<ul class="pagination">
+					<li class="page-item to_start"><a class="page-link" href="#">В начало</a></li>
+					<li class="page-item"><a class="page-link" href="#"><svg width="19" height="8" viewBox="0 0 19 8" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M3.99 5L19 5L19 3L3.99 3L3.99 -1.31222e-06L3.49691e-07 4L3.99 8L3.99 5Z" />
 							</svg>
-						</div>
-						<div class="howToBuy_item__title">Оставьте заявку</div>
-						<div class="howToBuy_item__descr">
-							Выберите для себя
-							дверь на нашем сайте.
-						</div>
-					</div>
-				</div>
-				<div class="col-md-12 col-lg-3 no-p">
-					<div class="howToBuy_item">
-						<div class="howToBuy_item__icon">
-							<svg width="40" height="44" viewBox="0 0 40 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M35.5556 4.4H26.2667C25.3333 1.848 22.8889 0 20 0C17.1111 0 14.6667 1.848 13.7333 4.4H4.44444C2 4.4 0 6.38 0 8.8V39.6C0 42.02 2 44 4.44444 44H35.5556C38 44 40 42.02 40 39.6V8.8C40 6.38 38 4.4 35.5556 4.4ZM20 4.4C21.2222 4.4 22.2222 5.39 22.2222 6.6C22.2222 7.81 21.2222 8.8 20 8.8C18.7778 8.8 17.7778 7.81 17.7778 6.6C17.7778 5.39 18.7778 4.4 20 4.4ZM15.5556 35.2L6.66667 26.4L9.8 23.298L15.5556 28.974L30.2 14.476L33.3333 17.6L15.5556 35.2Z" />
+						</a></li>
+					<li class="page-item active"><a class="page-link" href="#">1</a></li>
+					<li class="page-item"><a class="page-link" href="#">2</a></li>
+					<li class="page-item"><a class="page-link" href="#">3</a></li>
+					<li class="page-item"><a class="page-link" href="#">4</a></li>
+					<li class="page-item"><a class="page-link" href="#">5</a></li>
+					<li class="page-item"><a class="page-link" href="#">...</a></li>
+					<li class="page-item"><a class="page-link" href="#">34</a></li>
+					<li class="page-item"><a class="page-link" href="#">
+							<svg width="19" height="8" viewBox="0 0 19 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15.01 5L0 5L-1.74852e-07 3L15.01 3L15.01 -1.31222e-06L19 4L15.01 8L15.01 5Z" />
 							</svg>
-						</div>
-						<div class="howToBuy_item__title">Заключите договор</div>
-						<div class="howToBuy_item__descr">
-							Заключите договор
-							о поставке
-						</div>
-					</div>
-				</div>
-				<div class="col-md-12 col-lg-3 no-p">
-					<div class="howToBuy_item">
-						<div class="howToBuy_item__icon">
-							<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M22 0C9.856 0 0 9.856 0 22C0 34.144 9.856 44 22 44C34.144 44 44 34.144 44 22C44 9.856 34.144 0 22 0ZM25.102 35.398V39.6H19.228V35.354C15.466 34.562 12.276 32.142 12.034 27.874H16.346C16.566 30.184 18.15 31.988 22.176 31.988C26.488 31.988 27.456 29.832 27.456 28.49C27.456 26.664 26.488 24.948 21.582 23.782C16.126 22.462 12.386 20.218 12.386 15.708C12.386 11.924 15.444 9.46 19.228 8.646V4.4H25.102V8.69C29.194 9.68 31.24 12.782 31.372 16.148H27.06C26.95 13.706 25.652 12.034 22.176 12.034C18.876 12.034 16.896 13.53 16.896 15.642C16.896 17.49 18.326 18.7 22.77 19.844C27.214 20.988 31.966 22.902 31.966 28.446C31.944 32.472 28.93 34.672 25.102 35.398Z" />
-							</svg>
-						</div>
-						<div class="howToBuy_item__title">Согласуйте оплату</div>
-						<div class="howToBuy_item__descr">
-							Наличный или
-							безналичный расчет
-						</div>
-					</div>
-				</div>
-				<div class="col-md-12 col-lg-3 no-p">
-					<div class="howToBuy_item">
-						<div class="howToBuy_item__icon">
-							<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M22 0C9.856 0 0 9.856 0 22C0 34.144 9.856 44 22 44C34.144 44 44 34.144 44 22C44 9.856 34.144 0 22 0ZM17.6 33L6.6 22L9.702 18.898L17.6 26.774L34.298 10.076L37.4 13.2L17.6 33Z" />
-							</svg>
-						</div>
-						<div class="howToBuy_item__title">Ждите доставку</div>
-						<div class="howToBuy_item__descr">
-							Для дверей в наличии -
-							от 3 дней.
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
-	<section id="doorsSlider">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="section_title">Двери в интерьере</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="doorsSlider__container swiper-container">
-						<div class="doorsSlider__wrapper swiper-wrapper">
-							<div class="doorsSlider__item swiper-slide">
-								<div class="doorsSlider__item_hover"></div>
-								<picture>
-									<source srcset="images/dest/doorSlider.webp" type="image/webp">
-									<img src="images/dest/doorSlider.png" class="img-responsive">
-								</picture>
-							</div>
-							<div class="doorsSlider__item swiper-slide">
-								<div class="doorsSlider__item_hover"></div>
-								<picture>
-									<source srcset="images/dest/doorSlider.webp" type="image/webp">
-									<img src="images/dest/doorSlider.png" class="img-responsive">
-								</picture>
-							</div>
-							<div class="doorsSlider__item swiper-slide">
-								<div class="doorsSlider__item_hover"></div>
-								<picture>
-									<source srcset="images/dest/doorSlider.webp" type="image/webp">
-									<img src="images/dest/doorSlider.png" class="img-responsive">
-								</picture>
-							</div>
-							<div class="doorsSlider__item swiper-slide">
-								<div class="doorsSlider__item_hover"></div>
-								<picture>
-									<source srcset="images/dest/doorSlider.webp" type="image/webp">
-									<img src="images/dest/doorSlider.png" class="img-responsive">
-								</picture>
-							</div>
-						</div>
-						<div class="swiper-button-next"></div>
-						<div class="swiper-button-prev"></div>
-					</div>
-				</div>
-			</div>
+						</a></li>
+					<li class="page-item to_end"><a class="page-link" href="#">В конец</a></li>
+				</ul>
+			</nav>
 		</div>
-	</section>
+	</div>
+
 
 	<footer>
 		<div class="container">
