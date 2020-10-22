@@ -77,16 +77,80 @@
 	</div>
 
 
-	<section id="catalog" class="home">
+	<section id="catalog">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
-					<div class="section_title">Межкомнатные двери</div>
-				</div>
-				<div class="col-md-8">
-					<div class="filter">
-
-					</div>
+				<div class="col-12">
+					<form class="catalog_filter">
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="section_title">Межкомнатные двери</div>
+							</div>
+							<div
+								class="col-lg-8 d-flex align-items-lg-center align-items-md-start justify-content-lg-end justify-content-md-center">
+								<div class="filter_item">
+									<div class="mobile_filter_item">
+										<div class="mobile_filter_item__filter">
+											Фильтр
+											<span class="arrow">
+												<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M1.88 1.04904e-05L8 6.18085L14.12 1.04904e-05L16 0.0836382L8 8.1808L0 0.0836382L1.88 1.04904e-05Z" />
+												</svg>
+											</span>
+										</div>
+									</div>
+									<div class="list">
+										<div class="filter">
+											<div class="price" onclick="activePriceRange()">
+												Цена
+												<span class="arrow">
+													<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M1.88 1.04904e-05L8 6.18085L14.12 1.04904e-05L16 0.0836382L8 8.1808L0 0.0836382L1.88 1.04904e-05Z" />
+													</svg>
+												</span>
+											</div>
+											<div class="price_range">
+												<input type="text" class="js-range-slider" name="my_range" value="" />
+											</div>
+										</div>
+										<div class="filter_type">
+											<div class="filter_title">Тип</div>
+											<select class="js-example-basic-single" name="type">
+												<option value="AL">Все</option>
+												<option value="AL">Одностворчатые</option>
+												<option value="WY">Двустворчатые</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="filter_item">
+									<div class="mobile_filter_item">
+										<div class="mobile_filter_item__filter">
+											Сортировка
+											<span class="arrow">
+												<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M1.88 1.04904e-05L8 6.18085L14.12 1.04904e-05L16 0.0836382L8 8.1808L0 0.0836382L1.88 1.04904e-05Z" />
+												</svg>
+											</span>
+										</div>
+									</div>
+									<div class="list">
+										<div class="filter_sort">
+											<div class="filter_title">Сортировка</div>
+											<select class="js-example-basic-single" name="sort">
+												<option value="AL">По умолчанию</option>
+												<option value="AL">Сначала дорогие</option>
+												<option value="WY">Сначала недорогие</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 			<div class="row">
@@ -224,8 +288,8 @@
 			<nav aria-label="Page navigation example">
 				<ul class="pagination">
 					<li class="page-item to_start"><a class="page-link" href="#">В начало</a></li>
-					<li class="page-item"><a class="page-link" href="#"><svg width="19" height="8" viewBox="0 0 19 8" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
+					<li class="page-item arrow_left"><a class="page-link" href="#"><svg width="19" height="8" viewBox="0 0 19 8"
+								fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M3.99 5L19 5L19 3L3.99 3L3.99 -1.31222e-06L3.49691e-07 4L3.99 8L3.99 5Z" />
 							</svg>
 						</a></li>
@@ -236,7 +300,7 @@
 					<li class="page-item"><a class="page-link" href="#">5</a></li>
 					<li class="page-item"><a class="page-link" href="#">...</a></li>
 					<li class="page-item"><a class="page-link" href="#">34</a></li>
-					<li class="page-item"><a class="page-link" href="#">
+					<li class="page-item arrow_right"><a class="page-link" href="#">
 							<svg width="19" height="8" viewBox="0 0 19 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M15.01 5L0 5L-1.74852e-07 3L15.01 3L15.01 -1.31222e-06L19 4L15.01 8L15.01 5Z" />
 							</svg>

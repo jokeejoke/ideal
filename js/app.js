@@ -2,9 +2,41 @@ $(window).on("load", function () {
 	$(".preloader").delay(500).fadeOut("slow");
 });
 
+$(function () {
+	$(".js-range-slider").ionRangeSlider({
+		type: "double",
+		skin: "round",
+		min: 7000,
+		max: 15000,
+		from: 7000,
+		postfix: "p"
+	});
+	$('.js-example-basic-single').select2();
+
+	$(".filter_item .mobile_filter_item").on("click", function () {
+		$(this).next().toggleClass("active");
+	});
+
+	$('.image').magnificPopup({
+		delegate: 'a', // child items selector, by clicking on it popup will open
+		type: 'image',
+		tClose: 'Закрыть'
+		// other options
+	});
+	$('.open-popup-link').magnificPopup({
+		type: 'inline',
+		tClose: 'Закрыть',
+		midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+	});
+})
+
 function activeSearchInput() {
 	let inputBlock = document.querySelector(".search_input");
 	inputBlock.classList.toggle("active");
+}
+function activePriceRange() {
+	let priceRange = document.querySelector(".filter .price_range");
+	priceRange.classList.toggle("active");
 }
 
 function mobileCategoryColors() {
@@ -18,7 +50,9 @@ function mobileCategoryColors() {
 	}
 }
 
-
+function closePopup() {
+	$.magnificPopup.close();
+}
 
 function resizeCatalogItem() {
 	let catalogItems = document.querySelectorAll(".catalog_item");
@@ -34,9 +68,11 @@ function resizeCatalogItem() {
 		}
 	}
 }
+if (window.innerWidth <= 992) {
+	resizeCatalogItem()
+}
 
 mobileCategoryColors()
-
 
 var swiper = new Swiper('.main_slider', {
 	centeredSlides: true,
@@ -66,9 +102,10 @@ doorsSlider.slideTo(1, false, false);
 
 
 
-if (window.innerWidth <= 992) {
-	resizeCatalogItem()
-}
+
+
+
+
 
 
 

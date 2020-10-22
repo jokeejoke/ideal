@@ -2,7 +2,7 @@
 
 // Переопределяю стили Bootstrap
 .navbar
-  padding: 20px 0!important
+  padding: 26px 0!important
   border-bottom: 1px solid #333
 .navbar-brand
   padding-top: 0
@@ -10,6 +10,7 @@
   margin-right: 36px
 header .navbar-nav .nav-link
   padding: 0
+  letter-spacing: 0.03em
 header .navbar-expand-lg .navbar-nav .nav-link
   padding: 0
 .nav-item
@@ -24,6 +25,9 @@ header .navbar-expand-lg .navbar-nav .nav-link
       color: $accent
   &:last-child
     margin-right: 15px
+
+.container
+  max-width: 1230px
 
 .navbar-toggler
   padding: 0
@@ -51,7 +55,7 @@ header .navbar-expand-lg .navbar-nav .nav-link
 header .form-inline .search_input
   font-size: 14px
   padding: 0 0 0 10px
-  width: 110px
+  width: 130px
   border-radius: 0
   border-top: none
   border-left: none
@@ -119,6 +123,20 @@ header .form-inline .search_input
   margin-bottom: 30px
   .category__item
     position: relative
+    &_info
+      position: absolute
+      top: 0
+      right: 0
+      width: 50%
+      height: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      &_btn
+        margin-top: 105px
+    img
+      height: 350px
     &_mobile
       position: relative
       height: 246px
@@ -163,11 +181,11 @@ header .form-inline .search_input
 .theme-btn
   position: relative
   display: block
-  width: 180px
-  height: 48px
+  width: 200px
+  height: 53px
   text-align: center
-  line-height: 48px
-  font-weight: bold
+  line-height: 53px
+  font-weight: 700
   color: #373737
   border: 1.3px solid #373737
   border-radius: 10em
@@ -180,7 +198,7 @@ header .form-inline .search_input
     border-color: $accent
   &.category__item_btn
     position: absolute
-    top: 180px
+    top: 195px
     right: 40px
 
 .mb-30
@@ -408,5 +426,312 @@ footer
       .to_end
         top: 0
         right: 0
+
+.catalog_filter
+  margin-top: 43px
+  margin-bottom: 40px
+  .filter_item
+    position: relative
+    .list
+      display: flex
+      justify-content: flex-end
+      width: 100%
+      position: relative
+      background-color: #ffffff
+      z-index: 99
+      padding: 20px 0
+      &.active
+        display: block
+    &:nth-child(2)
+      .list
+        flex: 1
+    .mobile_filter_item
+      display: none
+      position: relative
+    .mobile_filter_item__filter
+      border: 1px solid #ccc
+      padding: 14px 16px
+      font-family: Gilroy
+      font-size: 14px
+      color: #000000
+      .arrow
+        position: absolute
+        right: 18px
+        svg
+          fill: #494949
+.filter
+  position: relative
+  .price
+    position: relative
+    padding: 10px 18px
+    border: 1px solid #494949
+    width: 114px
+    cursor: pointer
+    font-family: Gilroy
+    font-size: 14px
+    .arrow
+      position: absolute
+      top: 21%
+      right: 18px
+      svg
+        fill: #494949
+  .price_range
+    position: relative
+    border: 1px solid #494949
+    margin-top: 20px
+    padding: 0 50px 40px
+    width: 350px
+    position: absolute
+    background-color: #ffffff
+    z-index: 99
+    display: none
+    &.active
+      display: block
+  &_type,
+  &_sort
+    display: flex
+    align-items: center
+    margin-left: 40px
+    .select2-container
+      width: 202px!important
+      .select2-selection--single
+        height: 45px
+        border-radius: 0
+        border-color: #000
+        padding-left: 18px
+        padding-right: 25px
+        &:focus
+          outline: none
+          border-color: #494949
+        .select2-selection__rendered
+          font-family: Gilroy
+          font-size: 12px
+          height: 100%
+          line-height: 45px
+  &_title
+    color: #000000
+    font-size: 14px
+    font-family: Gilroy
+    margin-right: 20px
+
+#action
+  position: relative
+  margin-top: 40px
+  margin-bottom: 30px
+  .action_item
+    img
+      object-fit: cover
+    a
+      color: #000000
+      font-weight: 500
+      font-size: 20px
+      display: block
+      line-height: 1.4
+      margin-top: 15px
+      &:hover
+        text-decoration: none
+
+#about
+  position: relative
+  margin-top: 40px
+  .information_block
+    position: relative
+    font-family: RobotoLight
+    margin-bottom: 30px
+    padding-bottom: 30px
+    border-bottom: 1px solid #ccc
+    &:last-child
+      border-bottom: none
+    &__title
+      font-size: 25px
+      font-family: Roboto
+      color: #000000
+      font-weight: 500
+      margin-bottom: 20px
+    p.text,
+    p
+      max-width: 530px
+      margin: 0
+      font-family: RobotoLight
+      &.mt-20
+        margin-top: 20px
+    a
+      color: #000000
+      font-family: RobotoLight
+      &.mail
+        text-decoration: underline
+      &:hover
+        text-decoration: none
+    ul
+      margin: 0 0 25px 0
+      padding: 0 0 0 18px
+
+.select2-container--default .select2-selection--single .select2-selection__arrow
+  height: 100%
+  b
+    width: 10px
+    height: 10px
+    left: -50%
+    top: 36%
+    background-color: #ffffff
+    border-color: #494949
+    border-style: solid
+    border-width: 2px 2px 0 0
+    transform: rotate(135deg)
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
+  border-color: #494949
+  border-width: 2px 2px 0 0
+.select2-dropdown
+  border: 1px solid #494949
+  border-radius: 0
+.select2-search--dropdown
+  display: none
+.select2-results__option
+  font-family: Gilroy
+  padding-left: 27px
+  padding-top: 16px
+  padding-bottom: 16px
+  font-size: 12px
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable
+  background-color: #c4c4c4
+.select2-container--default .select2-results__option--selected
+  background-color: #ffffff
+
+.irs--round .irs-bar
+  background-color: $accent
+  height: 2px
+  top: 38px
+.irs--round .irs-line
+  background-color: $accent
+  height: 2px
+  top: 38px
+.irs--round .irs-handle
+  border: 3px solid $accent
+.irs--round .irs-from, .irs--round .irs-single, .irs--round .irs-to
+  background-color: transparent
+  color: $title
+  font-family: Gilroy
+.irs--round .irs-from:before, .irs--round .irs-single:before, .irs--round .irs-to:before
+  display: none
+.irs--round .irs-max, .irs--round .irs-min
+  display: none
+.irs-from, .irs-single, .irs-to
+  top: 60px
+.irs--round .irs-handle.state_hover, .irs--round .irs-handle:hover
+  background-color: $accent
+
+#detailPage
+  position: relative
+  margin-top: 60px
+  margin-bottom: 80px
+.detail_wrapper
+  position: relative
+  display: flex
+  .image
+    img
+      max-width: 191px
+  .description
+    position: relative
+    margin-left: 67px
+    &.mobile
+      display: none
+    .title
+      color: $title
+      font-size: 30px
+      margin: 0
+      .bold
+        font-weight: 700
+    .post_title
+      margin: 0
+      font-size: 14px
+      color: #000000
+      margin-bottom: 15px
+    .text
+      margin-top: 15px
+      font-size: 14px
+      max-width: 552px
+      color: $title
+      font-weight: 300
+      &__title
+        font-weight: 700
+      p
+        color: #4f4f4f
+        font-family: RobotoLight
+    .price
+      position: relative
+      display: flex
+      align-items: center
+      margin-top: 35px
+      &.mobile
+        display: none
+        text-align: center
+      .item_price
+        color: $title
+        font-size: 30px
+        font-weight: 700
+        margin-right: 20px
+  .detail_page_btn
+    background-color: $accent
+    color: #ffffff
+    border-color: $accent
+    font-size: 14px
+    display: inline-block
+
+.mfp-bg
+  background: transparent
+#modal-popup
+  position: relative
+  max-width: 715px
+  background-color: #ffffff
+  margin: 0 auto
+  padding: 58px 68px
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2)
+  border: 1px solid #ccc
+  .success_msg
+    display: none
+    text-align: center
+    font-size: 20px
+    color: #87ce02
+    margin-bottom: 0
+  form
+    position: relative
+    .form_title
+      font-size: 30px
+      color: #000000
+      font-weight: 700
+      letter-spacing: 0.02em
+      line-height: 1.1
+    .post_title
+      margin-top: 10px
+      margin-bottom: 0
+      color: #000000
+      letter-spacing: 0.02em
+    input
+      width: 100%
+      margin-top: 25px
+      padding: 12px 22px
+      font-size: 14px
+      border: 1px solid #ababab
+      border-radius: 0
+    .submit
+      margin-top: 25px
+      border: none
+      background-color: $accent
+      color: #ffffff
+      padding: 19px 40px
+      font-size: 14px
+      font-weight: 700
+    p.confirm
+      font-size: 12px
+      color: #4f4f4f
+      margin-top: 44px
+      margin-bottom: 0
+  .mfp-close
+    display: none
+  .close_btn
+    position: absolute
+    top: 35px
+    right: 39px
+    cursor: pointer
 
 @import media

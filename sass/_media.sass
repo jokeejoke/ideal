@@ -5,21 +5,34 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 	.nav-item
-		margin: 0 16px
+		margin: 0 25px
+		.nav-link
+			font-size: 14px
+	.navbar-brand
+		margin-right: 10px
+	header .form-inline .search_input
+		width: 100px
+		font-size: 15px
 	.main_slider .swiper-pagination
 		bottom: 20px
 	.theme-btn.category__item_btn
-		width: 150px
-		height: 40px
-		line-height: 38px
-		font-size: 12px
-		top: 150px
-		right: 32px
+		right: 27px
 	footer .footer_wrapper .footer_text
 		margin-right: 70px
+	.filter_sort, .filter_type
+		margin-left: 30px
+	.filter_sort .select2-container, .filter_type .select2-container
+		width: 180px !important
+	#action .action_item a
+		font-size: 16px
+	.theme-btn
+		width: 190px
+		height: 50px
 
 // ≥992px
 +media-breakpoint-down(md)
+	#mainSlider
+		margin-top: 0
 	.navbar
 		border-bottom: none
 	.nav-item
@@ -57,22 +70,64 @@
 		align-items: flex-start
 	.footer_contacts
 		margin-bottom: 1rem
+	.breadcrumb_block
+		display: none
+	.catalog_filter .filter_item
+		flex: 0 0 50%
+		&:first-child
+			padding-right: 7.5px
+		&:last-child
+			padding-left: 7.5px
+	.catalog_filter .filter_item .mobile_filter_item
+		display: block
+	.catalog_filter .filter_item
+		.list
+			display: none
+		&:first-child
+			.list
+				padding-right: 7.5px
+		&:last-child
+			.list
+				padding-right: 7.5px
+	.catalog_filter
+		margin-bottom: 10px
+		margin-top: 2px
+	.section_title
+		margin-bottom: 40px
+	.catalog_filter .filter_item .list
+		position: absolute
+	.filter .price_range
+		position: relative
+		margin-top: 0
+	.filter .price, .filter .price_range
+		width: 100%
+	.filter .price_range
+		border-top: 0
+	.filter_title
+		display: none
+	.filter_sort, .filter_type
+		margin-left: 0
+	.filter_sort .select2-container, .filter_type .select2-container
+		width: 100% !important
+	.filter .price
+		padding-left: 26px
+		font-size: 12px
+	.filter_type .select2-container .select2-selection--single, .filter_type .select2-container .select2-selection--single
+		border-top: 0
+	.select2-container--default .select2-selection--single .select2-selection__arrow b
+		left: -35%
+	#action
+		margin-top: 0
+	#category .category__item img
+		height: auto
+	.theme-btn
+		width: 200px
+		height: 53px
 	
 // ≥768px
 +media-breakpoint-down(sm)
 	.main_slider .swiper-pagination
 		bottom: 20px
-	#category .category__item
-		display: none
-	#category .category__item_mobile
-		display: flex
-	#category .category__item_mobile
-		margin-bottom: 25px
-	.theme-btn
-		width: 150px
-		height: 40px
-		line-height: 40px
-		font-size: 13px
 	.section_title
 		font-size: 22px
 	#catalog.home, #doorsSlider
@@ -83,6 +138,53 @@
 		flex-direction: row
 		align-items: center
 		padding: 33px 46px
+	.pagination_block nav .pagination .to_end, .pagination_block nav .pagination .to_start
+		display: none
+	.detail_wrapper
+		flex-direction: column
+		align-items: center
+	.detail_wrapper .description
+		margin-left: 0
+	.detail_wrapper .description.mobile
+		display: block
+		margin-left: 0
+		.title
+			display: block
+		.post_title
+			display: block
+			text-align: center
+	.detail_wrapper .description .title, .detail_wrapper .description .post_title
+		display: none
+	#detailPage
+		margin-top: 20px
+		margin-bottom: 25px
+	.detail_wrapper .description .price
+		display: none
+	.detail_wrapper .description .price.mobile
+		display: block
+		margin-top: 0
+		margin-bottom: 40px
+		.item_price
+			font-size: 20px
+			margin: 19px 0
+	.detail_wrapper .detail_page_btn
+		width: 200px
+		height: 53px
+		line-height: 50px
+	.detail_wrapper .description .text
+		margin-top: 18px
+	footer
+		margin-top: 0
+	.pagination_block
+		margin-bottom: 25px
+	#modal-popup form .form_title
+		font-size: 20px
+	#modal-popup form .post_title
+		font-size: 14px
+	#action .action_item a
+		text-align: center
+	#about
+		margin-top: 0
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -109,9 +211,9 @@
 	#catalog .catalog_item__img
 		padding-top: 10px
 	.theme-btn
-		width: 120px
-		height: 30px
-		line-height: 28px
+		width: 130px
+		height: 35px
+		line-height: 35px
 		font-size: 12px
 	.howToBuy_item__descr
 		max-width: 150px
@@ -126,6 +228,60 @@
 		margin-bottom: 0
 	footer
 		margin-top: 10px
+	.filter .price_range
+		padding: 0 20px 50px
+	.pagination_block nav
+		padding: 21px 26px
+	.pagination_block nav .pagination .page-item .page-link
+		padding: 0 7px
+	.pagination .page-item.arrow_left,
+	.pagination .page-item.arrow_right
+		position: absolute
+	.pagination .page-item.arrow_left
+		left: 0
+	.pagination .page-item.arrow_right
+		right: 0
+	#detailPage
+		margin-top: 5px
+	.detail_wrapper .description .title
+		font-size: 26px
+	.detail_wrapper .description .post_title
+		font-size: 13px
+	#modal-popup form
+		text-align: center
+	#modal-popup
+		padding: 37px 24px
+	#modal-popup form .form_title
+		font-size: 18px
+		text-align: left
+	#modal-popup form .post_title
+		font-size: 12px
+		text-align: left
+	#modal-popup form input
+		margin-top: 15px
+		font-size: 12px
+	#modal-popup form .submit
+		margin-top: 15px
+		font-size: 12px
+		border-radius: 27px
+		margin-left: auto
+	#modal-popup form p.confirm
+		display: none
+	#action
+		margin-bottom: 10px
+	.section_title
+		margin-bottom: 30px
+	#about .information_block__title
+		font-size: 18px
+		margin-bottom: 10px
+	#about .information_block p, #about .information_block p
+		font-size: 14px
+	#category .category__item_info_btn
+		margin-top: 70px
+		width: 140px
+		height: 40px
+		line-height: 38px
+		font-size: 12px
 
 /*==========	Mobile First	==========*/
 
