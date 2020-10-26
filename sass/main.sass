@@ -2,12 +2,13 @@
 
 // Переопределяю стили Bootstrap
 .navbar
-  padding: 26px 0!important
+  padding: 26px 0 25px 0!important
   border-bottom: 0.3px solid #333
 .navbar-brand
   padding-top: 0
   padding-right: 0
-  margin-right: 36px
+  padding-bottom: 0
+  margin-right: 39px
 header .navbar-nav .nav-link
   padding: 0
   letter-spacing: 0.03em
@@ -15,13 +16,10 @@ header .navbar-expand-lg .navbar-nav .nav-link
   padding: 0
 .nav-item
   padding: 0
-  margin: 0 36px
+  margin: 0 38px
   .nav-link
     color: $textcolor
     &:hover
-      color: $accent
-  &.active
-    .nav-link
       color: $accent
   &:last-child
     margin-right: 15px
@@ -55,7 +53,7 @@ header .navbar-expand-lg .navbar-nav .nav-link
 header .form-inline .search_input
   font-size: 14px
   padding: 0 0 0 10px
-  width: 130px
+  width: 128px
   border-radius: 0
   border-top: none
   border-left: none
@@ -106,7 +104,7 @@ header .form-inline .search_input
         height: 100%
         object-fit: cover
   .swiper-pagination
-    bottom: 30px
+    bottom: 32px
     .swiper-pagination-bullet
       width: 17px
       height: 17px
@@ -206,11 +204,12 @@ header .form-inline .search_input
 
 .section_title
   position: relative
-  margin-top: 15px
-  margin-bottom: 20px
+  margin-top: 25px
+  margin-bottom: 30px
   color: $title
   font-weight: 500
-  font-size: 24px
+  font-size: 25px
+  line-height: 29px
 
 #catalog
   position: relative
@@ -222,8 +221,9 @@ header .form-inline .search_input
     display: flex
     flex-direction: column
     justify-content: center
-    margin-bottom: 30px
     height: 100%
+    padding-top: 41px
+    padding-bottom: 41px
     &:hover
       text-decoration: none
       border: none
@@ -249,23 +249,21 @@ header .form-inline .search_input
       opacity: 1
     &__img
       position: relative
-      height: 270px
+      height: 277px
       width: 100%
       display: flex
       justify-content: center
       align-items: center
-      padding-top: 20px
       padding-left: 10px
       padding-right: 10px
       img
-        max-height: 280px
-        max-width: 90%
+        max-height: 277px
+        max-width: 100%
     &__title
       font-size: 16px
       text-transform: uppercase
       color: #000000
-      margin-top: 20px
-      margin-bottom: 11px
+      margin-top: 39px
     &__price
       font-weight: 700
       color: #000000
@@ -274,7 +272,7 @@ header .form-inline .search_input
 
 #howToBuy
   position: relative
-  margin-bottom: 30px
+  margin-bottom: 26px
 .howToBuy_item
   position: relative
   background-color: #FFF4EC
@@ -284,15 +282,17 @@ header .form-inline .search_input
     svg
       fill: $accent
   &__title
-    margin-top: 25px
+    margin-top: 34px
     margin-bottom: 10px
     color: $title
+    letter-spacing: 0.03em
     font-size: 18px
     font-weight: 500
   &__descr
     color: $title
     font-size: 14px
     line-height: 1.3
+    font-family: RobotoLight
 
 #doorsSlider
   position: relative
@@ -311,7 +311,7 @@ header .form-inline .search_input
         background-color: transparent
     img
       width: 570px
-      height: 500px
+      height: 540px
       object-fit: cover
   .swiper-button-prev,
   .swiper-button-next
@@ -327,38 +327,67 @@ footer
   .footer_wrapper
     position: relative
     background-color: #F5F5F5
-    padding: 48px 92px
+    padding: 37px 92px 52px 92px
     display: flex
-    align-items: center
     .footer_text
-      margin-right: 129px
+      margin-right: 100px
+      margin-top: 12px
       p
         margin-top: 24px
         max-width: 378px
         color: $title
         font-size: 12px
+        font-family: RobotoLight
     .footer_contacts
+      .icon
+        position: relative
+        width: 18px
+        height: 18px
+        background-color: $accent
+        color: #fff
+        border-radius: 50%
+        text-align: center
+        line-height: 16px
+        margin-right: 11px
       &__title
         text-transform: uppercase
         font-weight: 700
         color: $title
-        margin-bottom: 3px
+        margin-bottom: 7px
+        margin-left: 30px
+        letter-spacing: 0.07px
+        line-height: 1.1
       a.mail
-        display: inline-block
+        display: flex
+        align-items: center
         font-size: 12px
         color: $title
+        letter-spacing: 0.7px
       .address
         font-size: 12px
         color: $title
         margin-top: 13px
-        margin-bottom: 25px
-      a.phone
-        display: inline-block
-        font-weight: 700
-        color: $title
+        display: flex
+        letter-spacing: 0.7px
+        align-items: center
+        margin-bottom: 15px
+      .phone
+        display: flex
+        align-items: center
+        &_list
+          display: flex
+          flex-direction: column
+          line-height: 1.2
+          a
+            display: inline-block
+            letter-spacing: 0.7px
+            color: $title
+            &.bold
+              font-weight: 700
     .footer_social
       position: relative
       flex: 1
+      margin-top: 46px
       ul
         margin: 0
         padding: 0
@@ -378,7 +407,7 @@ footer
             color: #ffffff
 .breadcrumb_block
   position: relative
-  margin-top: 50px
+  margin-top: 68px
   .breadcrumb
     padding: 0
     background-color: transparent
@@ -428,7 +457,7 @@ footer
         right: 0
 
 .catalog_filter
-  margin-top: 43px
+  margin-top: 32px
   margin-bottom: 40px
   .filter_item
     position: relative
@@ -516,8 +545,10 @@ footer
 
 #action
   position: relative
-  margin-top: 40px
+  margin-top: 55px
   margin-bottom: 30px
+  .section_title
+    margin-bottom: 20px
   .action_item
     img
       object-fit: cover
@@ -527,13 +558,13 @@ footer
       font-size: 20px
       display: block
       line-height: 1.4
-      margin-top: 15px
+      margin-top: 10px
       &:hover
         text-decoration: none
 
 #about
   position: relative
-  margin-top: 40px
+  margin-top: 80px
   .information_block
     position: relative
     font-family: RobotoLight
@@ -548,6 +579,7 @@ footer
       color: #000000
       font-weight: 500
       margin-bottom: 20px
+      line-height: 29px
     p.text,
     p
       max-width: 530px
@@ -565,6 +597,21 @@ footer
     ul
       margin: 0 0 25px 0
       padding: 0 0 0 18px
+    .soc
+      display: flex
+      align-items: center
+      margin-bottom: 28px
+      .icon
+        width: 20px
+        height: 20px
+        background-color: $accent
+        color: #ffffff
+        line-height: 18px
+        text-align: center
+        border-radius: 50%
+        margin-right: 12px
+    .address
+      margin-left: 30px
 
 .select2-container--default .select2-selection--single .select2-selection__arrow
   height: 100%
@@ -622,7 +669,7 @@ footer
 
 #detailPage
   position: relative
-  margin-top: 60px
+  margin-top: 66px
   margin-bottom: 80px
 .detail_wrapper
   position: relative
@@ -637,7 +684,7 @@ footer
       display: none
     .title
       color: $title
-      font-size: 30px
+      font-size: 29px
       margin: 0
       .bold
         font-weight: 700
@@ -645,7 +692,7 @@ footer
       margin: 0
       font-size: 14px
       color: #000000
-      margin-bottom: 15px
+      margin-bottom: 26px
     .text
       margin-top: 15px
       font-size: 14px
@@ -657,11 +704,12 @@ footer
       p
         color: #4f4f4f
         font-family: RobotoLight
+        line-height: 1.5
     .price
       position: relative
       display: flex
       align-items: center
-      margin-top: 35px
+      margin-top: 22px
       &.mobile
         display: none
         text-align: center

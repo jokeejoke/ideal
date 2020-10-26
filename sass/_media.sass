@@ -69,7 +69,7 @@
 		flex-direction: column
 		align-items: flex-start
 	.footer_contacts
-		margin-bottom: 1rem
+		margin-top: 25px
 	.breadcrumb_block
 		display: none
 	.catalog_filter .filter_item
@@ -138,6 +138,10 @@
 		flex-direction: row
 		align-items: center
 		padding: 33px 46px
+	.footer_contacts
+		margin-top: 0
+	footer .footer_wrapper .footer_social
+		margin-top: 0
 	.pagination_block nav .pagination .to_end, .pagination_block nav .pagination .to_start
 		display: none
 	.detail_wrapper
@@ -185,6 +189,12 @@
 		text-align: center
 	#about
 		margin-top: 0
+	footer .footer_wrapper .footer_contacts .icon
+		display: none
+	footer .footer_wrapper .footer_contacts a.mail
+		text-decoration: underline
+	footer .footer_wrapper .footer_contacts__title
+		margin-left: 0
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -291,7 +301,8 @@
 
 // ≤768px
 +media-breakpoint-up(md)
-	
+	footer .footer_wrapper .footer_contacts .phone_list a.hn-lg
+		display: none
 
 // ≤992px
 +media-breakpoint-up(lg)
