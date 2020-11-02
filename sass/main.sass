@@ -524,24 +524,28 @@ footer
     .select2-container
       width: 202px!important
       .select2-selection--single
-        height: 45px
+        height: 52px
         border-radius: 0
-        border-color: #000
-        padding-left: 18px
+        border-color: #ccc
+        padding-left: 7px
         padding-right: 25px
         &:focus
           outline: none
-          border-color: #494949
+          border-color: #ccc
         .select2-selection__rendered
           font-family: Gilroy
-          font-size: 12px
+          font-size: 14px
           height: 100%
-          line-height: 45px
+          line-height: 52px
+          color: #000000
   &_title
     color: #000000
     font-size: 14px
     font-family: Gilroy
     margin-right: 20px
+
+.select2-dropdown
+  border: 1px solid #ccc!important
 
 #action
   position: relative
@@ -635,10 +639,11 @@ footer
   display: none
 .select2-results__option
   font-family: Gilroy
-  padding-left: 27px
-  padding-top: 16px
-  padding-bottom: 16px
-  font-size: 12px
+  padding-left: 16px
+  padding-top: 14px
+  padding-bottom: 14px
+  font-size: 14px
+  color: #000000
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable
   background-color: #c4c4c4
 .select2-container--default .select2-results__option--selected
