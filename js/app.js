@@ -95,6 +95,10 @@ var doorsSlider = new Swiper('.doorsSlider__container', {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	},
+	autoplay: {
+		delay: 4000,
+		disableOnInteraction: false,
+	},
 });
 doorsSlider.slideTo(1, false, false);
 
