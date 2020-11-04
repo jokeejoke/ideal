@@ -615,7 +615,14 @@ footer
         border-radius: 50%
         margin-right: 12px
     .address
-      margin-left: 30px
+      position: relative
+      display: flex
+      align-items: center
+      .icon
+        margin-right: 15px
+        svg
+          width: 16px
+          fill: $accent
 
 .select2-container--default .select2-selection--single .select2-selection__arrow
   height: 100%
@@ -786,5 +793,9 @@ footer
     top: 35px
     right: 39px
     cursor: pointer
+
+.mobile_category__item
+  position: relative
+  display: none
 
 @import media
