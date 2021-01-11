@@ -2,7 +2,13 @@ $(window).on("load", function () {
 	$(".preloader").delay(500).fadeOut("slow");
 });
 
+/**JQUERY FUNCTIONS */
 $(function () {
+
+	$('select.type_select').on('change', function () {
+		$("button.apply").addClass("active")
+	});
+
 	$(".js-range-slider").ionRangeSlider({
 		type: "double",
 		skin: "round",
@@ -28,7 +34,21 @@ $(function () {
 		tClose: 'Закрыть',
 		midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
 	});
+
+	$(".gallery").magnificPopup({
+		delegate: "a",
+		type: "image",
+		gallery: {
+			enabled: window.innerWidth < 1400 ? false : true,
+			tCounter: '<div class="mfp-counter">%curr% из %total%</div>'
+		},
+		tClose: 'Закрыть',
+		midClick: true
+	});
+
+
 })
+
 
 function activeSearchInput() {
 	let inputBlock = document.querySelector(".search_input");
@@ -100,10 +120,14 @@ var doorsSlider = new Swiper('.doorsSlider__container', {
 		disableOnInteraction: false,
 	},
 });
-doorsSlider.slideTo(1, false, false);
+//doorsSlider.slideTo(1, false, true);
 
-
-
+const $chooseCityBtn = document.querySelector('.city__btn')
+if($chooseCityBtn) {
+	$chooseCityBtn.addEventListener('click', function () { 
+		document.querySelector('.city__list').classList.toggle('active')
+	})
+}
 
 
 
