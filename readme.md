@@ -9,7 +9,7 @@
 <ol>
 	<li>Клонировать репозиторий из GitHub</li>
 	<li>Установить Node Modules: <strong>npm i</strong></li>
-	<li>RuЗапустить проект: <strong>gulp</strong></li>
+	<li>Запустить проект: <strong>gulp</strong></li>
 </ol>
 
 
