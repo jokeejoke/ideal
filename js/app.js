@@ -5,6 +5,13 @@ $(window).on("load", function () {
 /**JQUERY FUNCTIONS */
 $(function () {
 
+	$('.article__text').readmore({
+		speed: 200,
+		collapsedHeight: 170,
+		moreLink: '<a href="#" class="more">Читать продолжение</a>',
+		lessLink: '<a href="#" class="less">Свернуть</a>'
+	});
+
 	$('select.type_select').on('change', function () {
 		$("button.apply").addClass("active")
 	});
